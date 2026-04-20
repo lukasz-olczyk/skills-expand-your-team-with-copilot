@@ -187,7 +187,8 @@ section h3 {
   margin-top: auto;
   padding-top: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Activity Tag */
@@ -466,6 +467,76 @@ button {
   border: 1px dashed var(--border);
   margin: 10px 0;
   font-size: 0.85rem;
+}
+
+/* Share button and popover */
+.share-button {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.share-button:hover {
+  background-color: var(--background);
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.share-icon {
+  font-size: 0.85rem;
+}
+
+.share-popover {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  margin-top: 6px;
+}
+
+.share-link {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.share-link:hover {
+  opacity: 0.85;
+}
+
+.share-twitter {
+  background-color: #000;
+  color: #fff;
+}
+
+.share-facebook {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.share-copy {
+  background-color: var(--background);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
 }
 
 footer {
